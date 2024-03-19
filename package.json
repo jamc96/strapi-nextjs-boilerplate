@@ -7,7 +7,9 @@
   "author": "jamc96 <jamc.mejia@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "clear": "cd frontend && rm -rf .next && rm -rf cache",
+    "clear:frontend": "cd frontend && rm -rf .next && rm -rf cache",
+    "clear:backend": "cd backend && rm -rf build",
+    "clear": "yarn clear:backend && yarn clear:frontend",
     "run:backend": "cd backend && yarn develop",
     "run:frontend": "cd frontend && yarn dev",
     "dev": "yarn clear && concurrently \"yarn run:backend\"  \"yarn run:frontend\"",

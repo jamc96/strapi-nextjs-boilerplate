@@ -8,9 +8,12 @@
   "license": "MIT",
   "scripts": {
     "clear": "cd frontend && rm -rf .next && rm -rf cache",
-    "dev": "yarn clear && concurrently \"cd frontend && yarn dev\" \"cd backend && yarn develop\"",
-    "frontend": "yarn dev --prefix ../frontend/",
-    "backend": "yarn dev --prefix ../backend/"
+    "run:backend": "cd backend && yarn develop",
+    "run:frontend": "cd frontend && yarn dev",
+    "dev": "yarn clear && concurrently \"yarn run:backend\"  \"yarn run:frontend\"",
+    "setup:frontend": "cd frontend && yarn",
+    "setup:backend": "cd backend && yarn",
+    "setup": "yarn install && yarn setup:frontend && yarn setup:backend"
   },
   "dependencies": {
     "concurrently": "^8.2.2"

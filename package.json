@@ -5,5 +5,14 @@
   "main": "package.json",
   "repository": "git@github.com:jamc96/strapi-nextjs-boilerplate.git",
   "author": "jamc96 <jamc.mejia@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "clear": "cd frontend && rm -rf .next && rm -rf cache",
+    "dev": "yarn clear && concurrently \"cd frontend && yarn dev\" \"cd backend && yarn develop\"",
+    "frontend": "yarn dev --prefix ../frontend/",
+    "backend": "yarn dev --prefix ../backend/"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
 }

@@ -1,0 +1,9 @@
+{
+  "name": "strapi-nextjs-boilerplate",
+  "version": "1.0.0",
+  "description": "The Strapi-Next.js Boilerplate merges Strapi's CMS flexibility with Next.js's React framework for swift creation of dynamic web apps.",
+  "main": "package.json",
+  "repository": "git@github.com:jamc96/strapi-nextjs-boilerplate.git",
+  "author": "jamc96 <jamc.mejia@gmail.com>",
+  "license": "MIT"
+}

@@ -13,7 +13,8 @@
     "dev": "yarn clear && concurrently \"yarn run:backend\"  \"yarn run:frontend\"",
     "setup:frontend": "cd frontend && yarn",
     "setup:backend": "cd backend && yarn",
-    "setup": "yarn install && yarn setup:frontend && yarn setup:backend"
+    "setup": "yarn install && yarn setup:frontend && yarn setup:backend",
+    "copy": "node copy-types.js"
   },
   "dependencies": {
     "concurrently": "^8.2.2"
